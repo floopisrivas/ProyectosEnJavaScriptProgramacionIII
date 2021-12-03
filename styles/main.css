@@ -1,0 +1,153 @@
+    body {
+        margin-top: 0px;
+        font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #e6e4d9;
+        background-image: url('../images/pattern.png');
+    }
+
+    #mainheader {
+        background-color: #003b7e;
+    }
+
+    nav {
+        height: 60px;
+        width: 1000px;
+        margin: 0 auto 20px;
+    }
+
+    nav > ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    nav > ul > li {
+        float: left;
+    }
+
+    nav > ul > li a {
+        display: block;
+        color: rgb(186, 190, 216);
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    #leftmenu {
+        float: left;
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    #main {
+        float: right;
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        clear: both;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        background: #003b7e ;
+        color: rgb(209, 209, 209);
+
+    }
+    p {
+    font-size: 18px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    li {
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+    figcaption {
+        font-style: italic;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        font-family: 'Cookie', Verdana, Arial, sans-serif;
+        font-weight: normal;
+    }
+
+    h4 {
+    text-align: center; }
+
+    .promotion {
+        background-color: #003b7e;
+        color: white;
+        width: 450px;
+        text-align: center;
+        border: 10px solid #51a7ec;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    .promotion img {
+    width: 50%;
+    }
+
+    .promotion-purple {
+        background-color: #003b7e;
+        border-color: #51a7ec;
+    }
+
+    #sidebar-heading {
+        font-size: 24px;
+    }
+
+    #leftmenu a {
+        color: #003b7e;
+    }
+
+    #leftmenu a:hover {
+        color: #51a7ec;
+    }
+    #button, #buttonCalc {
+        border-color: #1997ff;
+        color: rgb(139, 154, 156);
+        font-size: 20px;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+        
+    }
+    #valortab{
+
+        border: 5px solid #003b7e;
+        padding: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    #botIngres {
+        padding: 10px;
+        margin-bottom: 10px;
+        width: auto;
+        height: auto;
+
+    }
+    #photo{
+        text-align: center;
+    }
+    #text{
+        text-align: center;
+    }
+
+

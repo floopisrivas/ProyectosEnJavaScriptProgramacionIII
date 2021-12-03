@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Programacion III</title>
+    <meta name="autor" content="Rivas Florencia">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="iconcrud.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Lato:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+<body>
+    <header id="mainheader">
+        <nav>
+            <ul>
+                <li><img src="images/pie.png" height="61" /></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Todos los proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div style="width:1200px;margin-left: auto;margin-right: auto;">
+        <aside id="leftmenu">
+            <a href="index.html"><img src="images/frlogo.png" /></a>
+
+            <header>
+                <h2>Navega por las categorias</h2>
+                <h6 style="font-size:35px;color:#003b7e">Proyecto 4: CRUD </h6>
+            </header>
+            <ul>
+                <li><a href="calculador.html">Calculadora</a></li>
+                <li><a href="tablaMulti.html">Tabla de Multiplicar</a></li>
+                <li><a href="crono.html">Cronómetro</a></li>
+                <li><a href="registr.html">API/Registros </a></li>
+            </ul>
+        </aside>
+        <main id="mainProd">
+            <article>
+                <header>
+                        <form action="javascript:void(0);" onsubmit="app.Add()"> 
+                            <input type="text" id="add-prod" placeholder="Agregar producto">
+                            <input type="submit" value="Agregar" class="btn btn-success" > 
+                        </form>
+            
+                        <br>
+                        <div id="alim" role="aria-hidden">
+                            <form action="javascript:void(0);"  id="guardarEdit">
+                                <input type="text" id="edit-prod" placeholder="Editar producto">
+                                <input type="submit" value="Guardar" class="btn btn-primary" /> <a onclick="CloseInput()" aria-label="Close"></a>
+                            </form>
+                        </div>
+                </header>
+            </article>
+        </main>
+        <br>
+
+        <main id="mainProd">
+            <table border="1" style="width:300px;height:50px;border: 2px solid rgb(0, 106, 177);border-collapse: collapse; padding: 20px;border-spacing: 5px;margin: 0px auto;">
+                <thead>
+                    <tr>
+                        <th class="row d-flex justify-content-center"> LISTADO DE PRODUCTOS </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>
+                            <div>
+                                <p id="productoCargar"></p>
+                                <br>
+                                <table>
+                                    <tbody id="prod"></tbody>  <br>
+                                </table> <br>
+                                <div id="text">
+                                    <input type="buttonActualizar" class="btn btn-info" value="Limpiar" onclick="location.reload()"/>
+                                </div>
+                                
+                            </div> 
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+    
+    </div>
+
+    <footer>
+        <p><small>&copy; 2021 Proyectos para Programación III - Todos los derechos reservados</small></p>
+        <p><small>Sitio creado por Rivas Florencia</small></p>
+    </footer>
+
+    <script src="mainCrud.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Programacion III</title>
+    <meta name="autor" content="Rivas Florencia">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="iconcrono.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Lato:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+    <header id="mainheader">
+        <nav>
+            <ul>
+                <li><img src="images/pie.png" height="61" /></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Todos los proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div style="width:1200px;margin-left: auto;margin-right: auto;">
+        <aside id="leftmenu">
+            <a href="index.html"><img src="images/frlogo.png" /></a>
+
+            <header>
+                <h2>Navega por las categorias</h2>
+            </header>
+            <ul>
+                <li><a href="calculador.html">Calculadora</a></li>
+                <li><a href="tablaMulti.html">Tabla de Multiplicar</a></li>
+                <li><a href="crud.html">CRUD con LocalStore</a></li>
+                <li><a href="registr.html">API/Registros </a></li>
+            </ul>
+        </aside>
+        <main id="main">
+            <article>
+                <header>
+                    <h1 style="font-size:35px;color:#003b7e">Proyecto 3: Cronómetro </h1>
+                </header>
+                <figure>
+                <div id="botIngres">
+                    <button id="buttonCron1" class="btn btn-success">Comienzo</button>
+                    <button id="buttonCron2" class="btn btn-danger">Parar</button>
+                    <button id="buttonCron3" class="btn btn-warning">Continuar</button>
+                    <button id="buttonCron4" class="btn btn-primary">Reiniciar</button>
+                    <button id="buttonCron5" class="btn btn-danger">Borrar registro</button>
+                </div>
+                <table border="1" style="width:250px;height:150px;border: 2px solid rgb(0, 106, 177);border-collapse: collapse; padding: 40px;border-spacing: 5px;margin: 0px auto;">
+            
+                    <tbody id="resultTabl">
+                        <tr>
+                            <td><h4 id="tiempoInicial"> 00:00:00:00 </h4></td>
+                        </tr>
+                        
+                </tbody>
+                </table >
+                </figure>
+            </article>
+
+        </main>
+
+        <footer>
+            <p><small>&copy; 2021 Proyectos para Programación III - Todos los derechos reservados</small></p>
+            <p><small>Sitio creado por Rivas Florencia</small></p>
+        </footer>
+    </div>
+    <script src="mainCrono.js"></script>
+</body>
+
+</html>

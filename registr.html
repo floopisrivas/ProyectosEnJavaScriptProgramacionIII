@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Programacion III</title>
+    <meta name="autor" content="Rivas Florencia">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="iconapi.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Lato:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<body>
+    <header id="mainheader">
+        <nav>
+            <ul>
+                <li><img src="images/pie.png" height="61" /></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Todos los proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div style="width:1200px;margin-left: auto;margin-right: auto;">
+        <aside id="leftmenu">
+            <a href="index.html"><img src="images/frlogo.png" /></a>
+
+            <header>
+                <h2>Navega por las categorias</h2>
+            </header>
+            <ul>
+                <li><a href="calculador.html">Calculadora</a></li>
+                <li><a href="tablaMulti.html">Tabla de Multiplicar</a></li>
+                <li><a href="crono.html">Cronómetro</a></li>
+                <li><a href="crud.html">CRUD con LocalStore</a></li>
+            </ul>
+        </aside>
+
+        <main id="main">
+            <table border="1" style="width:500px;height:50px;border: 2px solid rgb(0, 106, 177);border-collapse: collapse; padding: 20px;border-spacing: 5px;margin: 0px auto;">
+                <thead>
+                    <tr>
+                        <th class="row d-flex justify-content-center">GENERADOR DE USUARIOS ALEATORIOS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>
+                            <div>
+                                <div id="photo"></div>
+                                <div id="text">
+                                    <h2 id="nombre"></h2>
+                                    <p> <img src="iconApi/email.png"> <span id="correo"></span></p>
+                                    <p> <img src="iconApi/loca1.png"><span id="pais"></span></p>
+                                    <p> <img src="iconApi/llamada.png"><span id="tel"></span></p>
+                                    <p> <img src="iconApi/usuario.png"><span id="fechaNac"></span></p>
+                                    <input type="buttonActualizar" class="btn btn-primary" value="Actualizar" onclick="location.reload()"/>
+                                </div>
+                            </div> 
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <p><small>&copy; 2021 Proyectos para Programación III - Todos los derechos reservados</small></p>
+            <p><small>Sitio creado por Rivas Florencia</small></p>
+        </footer>
+    </div>
+    <script src="mainApi.js"></script>
+</body>
+
+</html>
