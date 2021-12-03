@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Programacion III</title>
+    <meta name="autor" content="Rivas Florencia">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="calculard.png">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Lato:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+    <header id="mainheader">
+        <nav>
+            <ul>
+                <li><img src="images/pie.png" height="61" /></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Todos los proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div style="width:1200px;margin-left: auto;margin-right: auto;">
+        <aside id="leftmenu">
+            <a href="index.html"><img src="images/frlogo.png" /></a>
+
+            <header>
+                <h2>Navega por las categorias</h2>
+            </header>
+            <ul>
+                <li><a href="tablaMulti.html">Tabla de Multiplicar</a></li>
+                <li><a href="crono.html">Cronometro</a></li>
+                <li><a href="crud.html">CRUD con LocalStore</a></li>
+                <li><a href="registr.html">API/Registros </a></li>
+
+            </ul>
+        </aside>
+        <main id="main" >
+            <header>
+                <h1 style="font-size:35px;color:#003ce067">Proyecto 1: Calculadora con 6 operaciones.</h1>
+            </header>
+                <form>
+                        <table style="border: 3px solid rgb(0, 47, 141); text-align:center;">
+                                <tr style="text-align:center;">
+                                    <td colspan = "4">
+                                    <input id="resultado" type="text" placeholder="Marque la operación a realizar" size="100" style="border: 3px solid rgb(64, 4, 114); padding: 15px;" /><input id="memoria" type="hidden" value="0" />
+                                    </td>
+                                </tr>
+                        </table>
+                </form>
+        </main>
+        <main id="main">
+            <article>
+                
+                <div class="row"> </div>
+                <div class="row">
+                    <div class="col-md-2">
+                </div>
+                <div class="col-md-6">
+                <div class="panel panel-primary">
+
+                    <div class="panel-body">
+                
+                        <div class="input-group">
+                            
+                            <input type="button" class="btn btn-info" value="Calculadora 6 operaciones"  style="width:380px" onclick="location.reload()"/>
+
+                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-default" value="7"
+                                onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=7}else{ var str2='7'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+                                style="width:55px">
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-default" value="8"
+                                onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=8}else{ var str2='8'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+                                style="width:55px">
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-default" value="9"
+                                onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=9}else{ var str2='9'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+                                style="width:55px">
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-primary" value="/" onClick="operaciones('dividir'); return false;"
+                                style="width:55px">
+                            </div>
+
+                        </div>
+
+                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-default" value="4"
+                                onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=4}else{ var str2='4'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+                                style="width:55px">
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-default" value="5"
+                                onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=5}else{ var str2='5'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+                                style="width:55px">
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-default" value="6"
+                                onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=6}else{ var str2='6'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+                                style="width:55px">
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-primary" value="*" onClick="operaciones('multiplicar'); return false;" style="width:55px">
+
+                            </div>
+
+                        </div>
+
+                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-default" value="1" onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=1}else{ var str2='1'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+                                style="width:55px">
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-default" value="2" onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=2}else{ var str2='2'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+                                style="width:55px">
+                            
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-default" value="3" onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=3}else{ var str2='3'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+                                style="width:55px">
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-primary" value="-" onClick="operaciones('restar'); return false;"
+                                style="width:55px">
+                            </div>
+                        </div>
+
+                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-default" value="0" onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=0}else{ var str2='0'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+                            style="width:55px"> 
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-primary" value="√" onClick="operaciones('raiz'); return false;" style="width:55px"> 
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-primary" value="^" onClick="operaciones('potencia'); return false;" style="width:55px">
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-primary" value="+" onClick="operaciones('sumar'); return false;" style="width:55px">
+                            </div>
+
+                        </div>
+
+                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-warning" value="Eliminar" style="width:190px" onclick="location.reload()"/>
+                            
+                            </div>
+                            <div class="btn-group" role="group">
+                                <input type="button" class="btn btn-success" value="=" onClick="operaciones('igual'); return false;"
+                                style="width:190px">
+                            </div>
+                        </div>
+                            
+                        </div>
+                    
+                    </div>  
+                </div> 
+            </div>
+            </article>
+        </main>
+        <footer>
+            <p><small>&copy; 2021 Proyectos para Programación III - Todos los derechos reservados</small></p>
+            <p><small>Sitio creado por Rivas Florencia</small></p>
+        </footer>
+    </div>
+    <script src="mainCalc.js"></script>
+</body>
+
+</html>
